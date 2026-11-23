@@ -24,7 +24,7 @@ then
     ON p.type_id = t.type_id 
   WHERE e.atomic_number = $ELEMENT;
   ")
-elif [[ $ELEMENT  =~ ^[A-Za-z]+$ ]]
+elif [[ $ELEMENT =~ ^[A-Za-z]+$ ]]
 then
   ELEMENT_INFO=$($PSQL "
   SELECT 
